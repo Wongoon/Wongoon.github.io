@@ -1,0 +1,82 @@
+@import url("https://cdn.jsdelivr.net/gh/sun-typeface/SUITE@2/fonts/static/woff2/SUITE.css");
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+:root{
+    font-size: 20px;
+}
+*{
+    /* font-family: 'SUITE'; */
+    /* font-family: 'Pretendard'; */
+    /* font-family: 'Noto Sans'; */
+    /* font-family: 'Poppins'; */
+    font-family: 'Ubuntu';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: 500;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #fff;
+}
+.content{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 500px;
+    width: 100vw;
+}
+.contents{
+    list-style: none;
+}
+.contents span{
+    position: relative;
+    cursor: pointer;
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+    display: inline-block;
+    color: #707070;
+    transition: 0.5s;
+    transition-delay: 0.2s;
+}
+.contents span.current{
+    color: #695cfe;
+    text-shadow: 0 0 10px #695cfe,
+    0 0 40px #695cfe,
+    0 0 80px #695cfe;
+}
+#indicator{
+    position: absolute;
+    top: 0;
+    width: 1px;
+    height: 75px;
+    transition: 0.5s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#indicator::before{
+    content:'';
+    width: 20px;
+    height: 20px;
+    border-top: 6px solid #695cfe;
+    border-right: 6px solid #695cfe;
+    transform: rotate(45deg) translate(-25px, 25px);
+}
+#indicator::after{
+    content:'';
+    width: 20px;
+    height: 20px;
+    border-top: 6px solid #695cfe;
+    border-right: 6px solid #695cfe;
+    transform: rotate(225deg) translate(-25px, 25px);
+}
