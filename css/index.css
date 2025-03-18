@@ -23,7 +23,7 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: #fff;
+    background: linear-gradient(315deg, #01050c, #0c152b);
 }
 .content{
     position: relative;
@@ -49,15 +49,15 @@ body{
     transition-delay: 0.2s;
 }
 .contents span.current{
-    color: #695cfe;
-    text-shadow: 0 0 10px #695cfe,
-    0 0 40px #695cfe,
-    0 0 80px #695cfe;
+    color: #0cf;
+    text-shadow: 0 0 10px #0cf,
+    0 0 40px #0cf,
+    0 0 80px #0cf;
 }
 #indicator{
     position: absolute;
     top: 0;
-    width: 1px;
+    width: 74px;
     height: 75px;
     transition: 0.5s;
     display: flex;
@@ -68,15 +68,15 @@ body{
     content:'';
     width: 20px;
     height: 20px;
-    border-top: 6px solid #695cfe;
-    border-right: 6px solid #695cfe;
+    border-top: 6px solid #0cf;
+    border-right: 6px solid #0cf;
     transform: rotate(45deg) translate(-25px, 25px);
 }
 #indicator::after{
     content:'';
     width: 20px;
     height: 20px;
-    border-top: 6px solid #695cfe;
-    border-right: 6px solid #695cfe;
+    border-top: 6px solid #0cf;
+    border-right: 6px solid #0cf;
     transform: rotate(225deg) translate(-25px, 25px);
 }

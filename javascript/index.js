@@ -12,8 +12,7 @@ function Indicator(e) {
 
 links.forEach(link => {
     link.addEventListener('click', () => {
-        if (window.confirm("이동하시겠습니까?"))
-            window.open("https://wongoon.github.io/" + link.getAttribute("id"));
+        window.open("https://wongoon.github.io/" + link.getAttribute("id"));
     });
 
     link.addEventListener('mousemove', (e) => {
