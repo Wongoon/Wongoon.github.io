@@ -11,9 +11,19 @@ function Indicator(e) {
     e.classList.add('current');
 }
 
+function GoToLink(link) {
+    let id = link.getAttribute("id");
+    if (id != "Blog") {
+        window.open("https://wongoon.github.io/" + id);
+    }
+    else {
+        window.alert("미완성");
+    }
+}
+
 links.forEach(link => {
     link.addEventListener('click', () => {
-        window.open("https://wongoon.github.io/" + link.getAttribute("id"));
+        GoToLink(link);
     });
 
     link.addEventListener('mousemove', (e) => {
@@ -23,7 +33,7 @@ links.forEach(link => {
 
 enter.addEventListener("keydown", (e) => {
     let current = document.querySelector('.current');
-    if (e.keyCode == 13) {
-        window.open("https://wongoon.github.io/" + current.getAttribute("id"));
+    if (e.key == "Enter") {
+        GoToLink(current);
     }
 });
